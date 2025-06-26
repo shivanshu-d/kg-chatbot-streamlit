@@ -1,5 +1,5 @@
 Knowledge-Graph-Powered Chatbot for eBay User Agreement
-This project is a Streamlit-based chatbot that uses a Knowledge Graph (KG) constructed from the eBay User Agreement. It answers user questions based on factual, graph-grounded triples using an open-source LLM.
+This project is a Streamlit-based chatbot that uses a Knowledge Graph constructed from the eBay User Agreement. It answers user questions based on factual, graph-grounded triples using an open-source LLM.
 Project Architecture
 graph TD
  A[PDF Document] --> B[Text Cleaning]
@@ -9,7 +9,7 @@ graph TD
  F[User Question] --> G[Graph Querying]
  E --> G
  G --> H[Inject into LLM Prompt]
- H --> I[Open-source LLM Response (TinyLlama)]
+ H --> I[LLM Response (TinyLlama)]
  I --> J[Answer to User]
 
 Folder Structure
@@ -24,21 +24,16 @@ knowledge-graph-chatbot/
 │   └── llm_prompt.py
 ├── app.py                
 ├── requirements.txt      
-├── README.md             
-└── report.pdf            
+├── README.md                  
  
 Setup Instructions
-# Step 1: Clone repo
-$ git clone https://github.com/shivanshu-d/kg-chatbot-streamlit
-$ cd kg-chatbot-ebay
- 
-# Step 2: Install dependencies
+# Step 1: Install dependencies
 $ pip install -r requirements.txt
  
-# Step 3: Build the Knowledge Graph
+# Step 2: Build the Knowledge Graph
 $ python src/graph_builder.py
  
-# Step 4: Run the chatbot
+# Step 3: Run the chatbot
 $ streamlit run app.py
 Prompting Strategy
 Context:
